@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.progress-container {
+    width: 300px; /* Fixed width */
+    height: 30px;
+    border: 2px solid #000; /* Static outer border */
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ddd; /* Background color */
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #4caf50; /* Green progress bar */
+    width: 0%; /* Starts at 0% */
+    transition: width 0.1s ease;
+}
+
+.loading-text {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.percentage-text {
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.car {
+    position: absolute;
+    font-size: 30px; /* Größe des Icons */
+    color: #ff0000; /* Farbe des Auto-Icons */
+    top: -40px; /* Oberhalb des Fortschrittsbalkens */
+    left: 0;
+    animation: moveCar 2s linear infinite; /* Konstante Geschwindigkeit */
+}
+
+@keyframes moveCar {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 300px; /* Moves to the right end */
+    }
+}
+
+
+
